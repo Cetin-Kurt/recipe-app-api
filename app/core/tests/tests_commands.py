@@ -19,7 +19,7 @@ class CommandTests(SimpleTestCase):
 
         call_command('wait_for_db')
 
-        patched_check.assert_called_once_with(database=['default'])
+        patched_check.assert_called_once_with(databases=['default'])
 
     @patch('time.sleep')
     @patch('core.management.commands.wait_for_db.Command.check')
